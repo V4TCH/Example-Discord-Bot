@@ -20,7 +20,7 @@ module.exports.run = async (Tag, msg, args) => {
     if (!member) return msg.channel.send('Provide a valid member');
 
     let bot;
-    if (member.user.bot === true) {
+    if (member.user.bot) {
         bot = "Yes";
     } else {
         bot = "No";
